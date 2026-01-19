@@ -2,13 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abhiram Usthepalli | DevOps Engineer</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; overflow-x: hidden; background: #0f172a; color: #e5e7eb; }
 
-    .world { position: relative; width: 500vw; height: 100vh; display: flex; }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      overflow: hidden;
+      background: linear-gradient(180deg, #020617, #020617);
+      color: #e5e7eb;
+    }
+
+    .world {
+      display: flex;
+      width: 500vw;
+      height: 100vh;
+      transition: transform 0.05s linear;
+    }
 
     section {
       width: 100vw;
@@ -19,17 +35,39 @@
       justify-content: center;
     }
 
-    section h1 { font-size: 3rem; margin-bottom: 20px; }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .bike {
+      position: fixed;
+      bottom: 30px;
+      left: 80px;
+      font-size: 60px;
+      z-index: 10;
+    }
 
     .checkpoint {
       margin-top: 30px;
       padding: 20px;
       border-left: 4px solid #38bdf8;
-      background: rgba(255,255,255,0.03);
-      border-radius: 12px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
     }
 
     .repo-links a {
@@ -39,220 +77,102 @@
       border-radius: 999px;
       background: #0ea5e9;
       color: #020617;
-      font-size: 0.9rem;
       font-weight: 600;
       text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
-    .repo-links a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(14,165,233,0.4);
-    }
-
-    .checkpoint.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    section p, li { font-size: 1.2rem; line-height: 1.6; }
-
-    .start { background: linear-gradient(120deg, #020617, #020617); }
-    .skills { background: linear-gradient(120deg, #020617, #020617); }
-    .exp { background: linear-gradient(120deg, #020617, #020617); }
-    .projects { background: linear-gradient(120deg, #020617, #020617); }
-    .contact { background: linear-gradient(120deg, #020617, #020617); }
-
-    .bike {
-      position: fixed;
-      bottom: 40px;
-      left: 100px;
-      font-size: 60px;
-      transition: transform 0.1s linear;
-    }
-
-    .hint {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      font-size: 14px;
-      opacity: 0.7;
-    }
-
-    ul { margin-left: 20px; }
   </style>
 </head>
-<body tabindex="0">
 
-<div class="hint">➡️ Use Arrow keys / Swipe</div>
-<div class="bike">🏍️</div>
+<body>
 
-<div class="world" id="world">
+  <!-- Bike -->
+  <div class="bike">🏍️</div>
 
-  <section class="start">
-    <h1>Hi, I'm Abhiram Usthepalli</h1>
-    <p><strong>DevOps Engineer</strong></p>
-    <p>AWS • Linux • CI/CD • Automation</p>
-  </section>
+  <!-- World -->
+  <div class="world" id="world">
 
-  <section class="skills">
-    <h1>Skills</h1>
-    <ul>
-      <li>AWS – EC2, S3, IAM, VPC</li>
-      <li>Docker & Kubernetes</li>
-      <li>Jenkins & GitHub Actions</li>
-      <li>Linux, Bash, Shell Scripting</li>
-      <li>Monitoring & Alerting</li>
-    </ul>
-  </section>
+    <!-- START -->
+    <section>
+      <h1>Hi, I'm Abhiram Usthepalli</h1>
+      <p><strong>DevOps Engineer</strong></p>
+      <p>AWS • Linux • CI/CD • Automation</p>
+    </section>
 
-      <section class="exp">
-    <h1>Experience</h1>
+    <!-- SKILLS -->
+    <section>
+      <h1>Skills</h1>
+      <ul>
+        <li>AWS – EC2, S3, IAM, VPC, EKS</li>
+        <li>Docker & Kubernetes</li>
+        <li>Terraform & GitHub Actions</li>
+        <li>CI/CD & GitOps (ArgoCD)</li>
+        <li>Linux & Bash Scripting</li>
+      </ul>
+    </section>
 
-    <div class="checkpoint">
-      <h2>🚩 DevOps Engineer</h2>
-      <p>Architected and maintained CI/CD pipelines using GitHub Actions and Jenkins. Designed and managed AWS infrastructure including EC2, VPC, IAM, S3, EKS, and Load Balancers.</p>
-      <p><strong>Impact:</strong> Improved deployment stability and reduced release failures through automated pipelines and standardized workflows.</p>
-    </div>
+    <!-- EXPERIENCE -->
+    <section>
+      <h1>Experience</h1>
 
-    <div class="checkpoint">
-      <h2>🚩 Kubernetes & GitOps Operations</h2>
-      <p>Deployed and operated Kubernetes workloads using Helm, Kustomize, and ArgoCD. Automated infrastructure provisioning with Terraform for EKS, VPC, IAM, and ECR.</p>
-      <p><strong>Impact:</strong> Enabled repeatable, environment-agnostic deployments and reduced manual intervention across environments.</p>
-    </div>
-
-    <div class="checkpoint">
-      <h2>🚩 Platform Reliability & Automation</h2>
-      <p>Containerized applications using Docker, developed Bash automation for Linux servers, and implemented monitoring using Prometheus and Grafana.</p>
-      <p><strong>Impact:</strong> Improved system observability and proactive issue detection, reducing operational overhead.</p>
-    </div>
-  </section>
-
-        <section class="projects">
-    <h1>Projects</h1>
-
-    <div class="checkpoint">
-      <h2>🚩 EKS Infrastructure Automation (Terraform)</h2>
-      <p>Provisioned production-grade AWS infrastructure including VPC, EKS cluster, managed node groups, NAT Gateway, and ECR. Automated IAM roles, aws-auth ConfigMap, and cluster bootstrap using Terraform.</p>
-      <p><strong>Impact:</strong> Reduced environment provisioning time by ~70% and enabled consistent, repeatable infrastructure across environments.</p>
-      <div class="repo-links">
-        <a href="https://github.com/your-username/eks-terraform" target="_blank">🔗 View on GitHub</a>
+      <div class="checkpoint">
+        <h2>🚩 DevOps Engineer</h2>
+        <p>Built and maintained CI/CD pipelines using GitHub Actions and Jenkins. Managed AWS infrastructure including EKS, IAM, VPC, and Load Balancers.</p>
+        <p><strong>Impact:</strong> Reduced release failures and improved deployment consistency.</p>
       </div>
-    </div>
 
-    <div class="checkpoint">
-      <h2>🚩 GitOps Deployment with ArgoCD</h2>
-      <p>Designed and implemented a GitOps-based deployment strategy for multi-environment Flask applications. Managed ArgoCD Applications, auto-sync, health checks, and progressive rollouts.</p>
-      <p><strong>Impact:</strong> Improved deployment reliability and reduced manual release effort by ~60% using automated GitOps workflows.</p>
-      <div class="repo-links">
-        <a href="https://github.com/your-username/argocd-gitops" target="_blank">🔗 View on GitHub</a>
+      <div class="checkpoint">
+        <h2>🚩 Kubernetes & Automation</h2>
+        <p>Deployed workloads using Helm, Kustomize, and ArgoCD. Automated infrastructure using Terraform.</p>
+        <p><strong>Impact:</strong> Faster, repeatable deployments across environments.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="checkpoint">
-      <h2>🚩 Containerized Flask Application on EKS</h2>
-      <p>Built Docker images, pushed to Amazon ECR, and deployed applications on EKS using Kubernetes Deployments, Services, and Ingress resources.</p>
-      <p><strong>Impact:</strong> Enabled scalable container deployments and reduced application release time from hours to minutes.</p>
-      <div class="repo-links">
-        <a href="https://github.com/your-username/flask-eks" target="_blank">🔗 View on GitHub</a>
+    <!-- PROJECTS -->
+    <section>
+      <h1>Projects</h1>
+
+      <div class="checkpoint">
+        <h2>🚩 EKS Infrastructure Automation</h2>
+        <p>Provisioned production-grade EKS infrastructure using Terraform.</p>
+        <p><strong>Impact:</strong> Reduced infra provisioning time by ~70%.</p>
+        <div class="repo-links">
+          <a href="#">View on GitHub</a>
+        </div>
       </div>
-    </div>
 
-    <div class="checkpoint">
-      <h2>🚩 AWS Security & Networking</h2>
-      <p>Implemented IAM least-privilege access, role-based permissions, VPC subnetting, and routing. Configured ALB Ingress Controller with path-based routing and SSL certificates.</p>
-      <p><strong>Impact:</strong> Improved security posture and ensured secure, scalable traffic routing for Kubernetes workloads.</p>
-      <div class="repo-links">
-        <a href="https://github.com/your-username/aws-security-networking" target="_blank">🔗 View on GitHub</a>
+      <div class="checkpoint">
+        <h2>🚩 GitOps with ArgoCD</h2>
+        <p>Implemented GitOps pipeline for multi-environment deployments.</p>
+        <p><strong>Impact:</strong> Reduced manual releases by ~60%.</p>
+        <div class="repo-links">
+          <a href="#">View on GitHub</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </section>
+    <!-- CONTACT -->
+    <section>
+      <h1>Contact</h1>
+      <p>📄 <a href="resume.pdf" target="_blank">Resume</a></p>
+      <p>💻 GitHub</p>
+      <p>🔗 LinkedIn</p>
+      <p>📧 Email</p>
+    </section>
 
-    <section class="contact">
-    <h1>Contact</h1>
-    <p>📄 <a href="resume.pdf" target="_blank">Resume</a></p>
-    <p>💻 GitHub</p>
-    <p>🔗 LinkedIn</p>
-    <p>📧 Email</p>
-  </section>
+  </div>
 
-  <!--
-  ================================
-  GitHub Actions CI/CD (place in .github/workflows/deploy.yml)
-  ================================
+  <!-- AUTO PLAY SCRIPT -->
+  <script>
+    let pos = 0;
+    const world = document.getElementById("world");
+    const maxScroll = window.innerWidth * 4;
 
-  name: Deploy Portfolio to GitHub Pages
-
-  on:
-    push:
-      branches:
-        - main
-
-  jobs:
-    deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
-
-        - name: Deploy to GitHub Pages
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./
-
-  -->
-
-</div>
-
-<script>
-  // Auto focus to capture keyboard events
-  window.addEventListener('load', () => {
-    document.body.focus();
-  });
-
-  // Click anywhere to re-focus
-  document.addEventListener('click', () => {
-    document.body.focus();
-  });
-  let pos = 0;
-  const world = document.getElementById('world');
-
-  function move(dx) {
-    pos += dx;
-    pos = Math.max(0, Math.min(pos, window.innerWidth * 4));
-    world.style.transform = `translateX(${-pos}px)`;
-  }
-
-  window.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight') move(40);
-    if (e.key === 'ArrowLeft') move(-40);
-  });
-    if (e.key === 'ArrowLeft') move(-40);
-  });
-
-  let touchStartX = null;
-  window.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
-  window.addEventListener('touchend', e => {
-    if (!touchStartX) return;
-    let dx = touchStartX - e.changedTouches[0].clientX;
-    move(dx);
-    touchStartX = null;
-  });
-  const checkpoints = document.querySelectorAll('.checkpoint');
-
-  function revealCheckpoints() {
-    checkpoints.forEach(cp => {
-      const rect = cp.getBoundingClientRect();
-      if (rect.left < window.innerWidth * 0.75) {
-        cp.classList.add('active');
-      }
-    });
-  }
-
-  window.addEventListener('keydown', revealCheckpoints);
-  window.addEventListener('touchend', revealCheckpoints);
-</script>
+    setInterval(() => {
+      pos += 1.5;
+      if (pos > maxScroll) return;
+      world.style.transform = `translateX(${-pos}px)`;
+    }, 20);
+  </script>
 
 </body>
 </html>
