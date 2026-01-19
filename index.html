@@ -81,7 +81,7 @@
     ul { margin-left: 20px; }
   </style>
 </head>
-<body>
+<body tabindex="0">
 
 <div class="hint">➡️ Use Arrow keys / Swipe</div>
 <div class="bike">🏍️</div>
@@ -206,6 +206,15 @@
 </div>
 
 <script>
+  // Auto focus to capture keyboard events
+  window.addEventListener('load', () => {
+    document.body.focus();
+  });
+
+  // Click anywhere to re-focus
+  document.addEventListener('click', () => {
+    document.body.focus();
+  });
   let pos = 0;
   const world = document.getElementById('world');
 
@@ -217,6 +226,8 @@
 
   window.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') move(40);
+    if (e.key === 'ArrowLeft') move(-40);
+  });
     if (e.key === 'ArrowLeft') move(-40);
   });
 
